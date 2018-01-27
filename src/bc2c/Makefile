@@ -7,7 +7,7 @@ FLAGS   := -cflags -I,+../obytelib -lflags -I,+../obytelib -libs obytelib,unix
 bc2c: $(TARGETS)
 
 $(BIN)/bc2c: $(SRCS) config.ml
-	$(OCAMLBUILD) $(FLAGS) main.native
+	$(OCAMLBUILD) -package obytelib $(FLAGS) main.native
 	cp .build/main.native $@
 
 config.ml: $(ETC)/config.ml
