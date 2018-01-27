@@ -8,6 +8,9 @@
 - ocamlbuild (on OPAM)
 - gcc (for simulation)
 
+> Note, OCaml must be compiled with X11 support otherwise you will receive
+> errors about a missing Graphics module.
+
 For flashing (optional but fun) you'll need the avr-gcc tools :
 
 On MacOS (with Homebrew) :
