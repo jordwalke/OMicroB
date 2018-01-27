@@ -1,0 +1,34 @@
+{
+  "name": "OMicroB",
+  "version": "0.1.0",
+  "description": "OMicroB",
+  "author": "stevenvar",
+  "license": "NONE",
+  "esy": {
+    "build": [
+      ["./configure", "-prefix", "#{self.install}"],
+      ["echo", "'done configuring'"],
+      ["make", "all"]
+    ],
+    "install": [
+      "make install"
+    ],
+    "buildsInSource": true
+  },
+  "dependencies": {
+    "@opam/ocamlfind": "*",
+    "@esy-ocaml/esy-installer": "^0.0.0",
+    "@opam/obytelib": "jordwalke/obytelib#1.2.0-esy",
+    "@opam/graphics": "*",
+    "@opam/ocamlclean": "*",
+    "@opam/ocamlbuild": "*"
+  },
+  "peerDependencies": {
+    "ocaml": "~4.6.000"
+  },
+  "devDependencies": {
+    "@opam/merlin": "^3.0.5",
+    "ocaml": "~4.6.000"
+  },
+  "private": true
+}

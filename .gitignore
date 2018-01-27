@@ -12,3 +12,4 @@
 **/*.elf.dSYM
 .build/
 config.ml
+node_modules
